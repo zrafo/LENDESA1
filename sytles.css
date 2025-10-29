@@ -1,0 +1,28 @@
+/*Estilos generales*/
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px
+}
+
+/*Estilo para el titulo*/
+h1{
+    color: #2d6cdf;
+    text-align: center;
+}
+
+/*Estilo para el parrafo*/
+p{  
+    color:#333;
+    font-size: 18px;
+}
+
+/*Estilo para un dev como caja*/
+.caja{
+    background-color: #ffffff;
+    border: 2px solid #2d6cdf;
+    padding:15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
