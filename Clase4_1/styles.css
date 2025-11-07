@@ -1,0 +1,11 @@
+@import url("../styles.css");
+.card { max-width: 520px; margin: 48px auto; padding: 24px; background: #fff; border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,.06); }
+.fila { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+input { padding: 10px; border: 1px solid #d1d5db; border-radius: 8px; }
+button { padding: 10px 14px; border: 0; border-radius: 8px; cursor: pointer; background: #ea580c; color: #fff; font-weight: 600; }
+button:hover { filter: brightness(1.05); }
+ul { margin-top: 16px; padding-left: 20px; }
+li { padding: 6px 0; display: flex; align-items: center; justify-content: space-between; }
+li button {
+  background: #ef4444; padding: 6px 10px; border-radius: 6px; color: #fff; border: 0; cursor: pointer;
+}
