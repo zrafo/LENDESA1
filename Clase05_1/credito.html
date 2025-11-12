@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solicitud de Crédito</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="credito.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Solicitud de Crédito</h1>
+    <p class="sub">Formulario multipasos + pre-evaluación (cuota y DTI)</p>
+  </header>
+
+  <main class="grid" style="max-width:900px">
+    <!-- Paso 1: Datos personales -->
+    <section class="card" data-step="1">
+      <h2>Paso 1: Datos personales</h2>
+      <label for="nombres">Nombres y apellidos</label>
+      <input id="nombres" type="text" placeholder="Ej: Rafael Molina"/>
+
+      <div class="row wrap">
+        <div style="flex:1; min-width:240px">
+          <label for="dni">DNI</label>
+          <input id="dni" type="text" maxlength="12" placeholder="12345678"/>
+        </div>
+        <div style="flex:1; min-width:240px">
+          <label for="cel">Celular</label>
+          <input id="cel" type="tel" placeholder="999 999 999"/>
+        </div>
+      </div>
+
+      <label for="correo">Correo</label>
+      <input id="correo" type="email" placeholder="nombre@correo.com"/>
+
+      <div class="row">
+        <button id="toStep2">Siguiente</button>
+      </div>
+      <p class="out" id="outStep1">—</p>
+    </section>
+
+    <!-- Paso 2: Detalle del crédito -->
+    <section class="card" data-step="2" style="display:none">
+      <h2>Paso 2: Detalle del crédito</h2>
+      <div class="row wrap">
+        <div style="flex:1; min-width:200px">
+          <label for="monto">Monto solicitado (S/)</label>
+          <input id="monto" type="number" min="500" step="100" placeholder="20000"/>
+        </div>
+        <div style="flex:1; min-width:200px">
+          <label for="tasa">Tasa anual (%)</label>
+          <input id="tasa" type="number" min="1" step="0.1" placeholder="18"/>
+        </div>
+        <div style="flex:1; min-width:200px">
+          <label for="plazo">Plazo (meses)</label>
+          <input id="plazo" type="number" min="6" step="1" placeholder="36"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <button id="calcCuota">Calcular cuota</button>
+        <button id="back1">Anterior</button>
+        <button id="toStep3">Siguiente</button>
+      </div>
+
+      <p class="out" id="outCalc">—</p>
+    </section>
+
+    <!-- Paso 3: Ingresos/Deudas y envío -->
+    <section class="card" data-step="3" style="display:none">
+      <h2>Paso 3: Ingresos y deudas</h2>
+      <div class="row wrap">
+        <div style="flex:1; min-width:220px">
+          <label for="ingresos">Ingresos mensuales (S/)</label>
+          <input id="ingresos" type="number" min="0" step="50" placeholder="7000"/>
+        </div>
+        <div style="flex:1; min-width:220px">
+          <label for="deudas">Deudas mensuales (S/)</label>
+          <input id="deudas" type="number" min="0" step="50" placeholder="1200"/>
+        </div>
+      </div>
+
+      <div class="row wrap">
+        <div style="flex:1; min-width:220px">
+          <label for="actividad">Actividad</label>
+          <select id="actividad">
+            <option value="dependiente">Dependiente</option>
+            <option value="independiente">Independiente</option>
+          </select>
+        </div>
+        <div style="flex:1; min-width:220px">
+          <label for="riesgo">Perfil de riesgo</label>
+          <select id="riesgo">
+            <option value="bajo">Bajo</option>
+            <option value="medio">Medio</option>
+            <option value="alto">Alto</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <button id="preEvaluar">Pre-evaluar</button>
+        <button id="back2">Anterior</button>
+        <button id="enviar">Enviar solicitud</button>
+      </div>
+
+      <p class="out" id="outEval">—</p>
+    </section>
+
+    <!-- Resumen -->
+    <section class="card" id="resumen" style="display:none">
+      <h2>Resumen de solicitud</h2>
+      <div id="resumenContenido" class="out">—</div>
+    </section>
+  </main>
+
+</body>
+</html>
