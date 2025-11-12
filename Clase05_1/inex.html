@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ejemplos básicos de JavaScript</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>ingreso y procesamiento de información</h1>
+    <p class="sub">HTML + CSS + JavaScript</p>
+  </header>
+
+  <main class="grid">
+    <!-- 1) Saludo por nombre -->
+    <section class="card">
+      <h2>1. Saludo por nombre</h2>
+      <label for="nombre">Ingresa tu nombre:</label>
+      <input id="nombre" type="text" placeholder="Ej: Rafael"/>
+      <button id="btnSaludar">Saludar</button>
+      <p class="out" id="outSaludo">—</p>
+    </section>
+
+    <!-- 2) Suma de dos números -->
+    <section class="card">
+      <h2>2. Suma de dos números</h2>
+      <div class="row">
+        <input id="n1" type="number" placeholder="Número 1"/>
+        <span>+</span>
+        <input id="n2" type="number" placeholder="Número 2"/>
+      </div>
+      <button id="btnSumar">Calcular suma</button>
+      <p class="out" id="outSuma">—</p>
+    </section>
+
+    <!-- 3) Promedio de notas (separadas por coma) -->
+    <section class="card">
+      <h2>3. Promedio de notas</h2>
+      <label for="notas">Ingresa notas separadas por coma (ej: 15, 18, 12.5):</label>
+      <input id="notas" type="text" placeholder="15, 18, 12.5"/>
+      <button id="btnPromedio">Calcular promedio</button>
+      <p class="out" id="outPromedio">—</p>
+    </section>
+
+    <!-- 4) Transformación de texto -->
+    <section class="card">
+      <h2>4. Transformación de texto</h2>
+      <label for="texto">Escribe una frase:</label>
+      <textarea id="texto" rows="3" placeholder="  Hola mundo  "></textarea>
+      <div class="row wrap">
+        <button id="btnTrim">Quitar espacios</button>
+        <button id="btnUpper">MAYÚSCULAS</button>
+        <button id="btnContar">Contar caracteres y palabras</button>
+      </div>
+      <p class="out" id="outTexto">—</p>
+    </section>
+
+    <!-- 5) Mini lista de compras (objeto simple) -->
+    <section class="card">
+      <h2>5. Mini lista de compras</h2>
+      <div class="row wrap">
+        <input id="item" type="text" placeholder="Artículo (ej: Manzanas)"/>
+        <input id="cantidad" type="number" min="1" placeholder="Cantidad"/>
+        <button id="btnAgregar">Agregar</button>
+        <button id="btnLimpiar">Limpiar lista</button>
+      </div>
+      <ul id="lista"></ul>
+      <p class="out" id="outTotal">Total de artículos: 0</p>
+    </section>
+  </main>
+</body>
+</html>
